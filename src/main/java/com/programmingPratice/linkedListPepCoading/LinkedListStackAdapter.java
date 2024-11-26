@@ -16,6 +16,7 @@ public class LinkedListStackAdapter {
             return list.size();
         }
 
+
         void push(int val) {
             list.addFirst(val);
         }
