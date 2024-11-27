@@ -1,27 +1,26 @@
 package com.programmingPratice.pepcoading1;
 
 public class firstOccurrenceString {
-    static void printIndex(String haystack, String needle)
-    {
-        boolean flag = false;
-        for (int i = 0; i < haystack.length() - needle.length()+1;i++) {
-            if (haystack.substring(i, i + needle.length()).equals(needle)) {
-                System.out.print(i + " ");
-                flag = true;
-            }
-        }
+    public static void main(String[] args) {
 
-        if (flag == false) {
-            System.out.println("NONE");
-        }
+        String str1 = "GeeksforGeeksforGeeks";
+        String str2 = "Geeks";
+        comp(str1, str2);
+
     }
 
-    // Driver code
-    public static void main(String[] args)
-    {
-        String str1 = "GeeksforGeeks";
-        String str2 = "Geeks";
-        printIndex(str1, str2);
+    public static void comp(String str, String str2) {
+
+        int n = str2.length();
+        for (int i = 0; i <= str.length() - n; i++) {
+
+            String subStr = str.substring(i, i + n);
+
+            if (subStr.equals(str2)) {
+                System.out.println(i);
+
+            }
+        }
     }
 
 }

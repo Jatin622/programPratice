@@ -3,19 +3,23 @@ package com.programmingPratice.pepcoading3;
 public class findMIssingNumber {
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 4, 5, 6, 7, 8};
+        int[] arr = {11, 12, 14, 15, 16, 17, 18};
         missNumber(arr);
     }
 
     public static void missNumber(int[] arr) {
-        int j = 0;
-        for (int i = 0; i <=10; i++) {
 
-            j = j + 1;
+        int start = 11;
+        int end = 20;
+        int currentIndex = 0;
 
-            if (arr[i] != j) {
-                System.out.println(j);
-                i--;
+        for (int i = start; i <= end; i++) {
+
+            if (currentIndex < arr.length && arr[currentIndex] == i) {
+
+                currentIndex++;
+            } else {
+                System.out.println(i);
             }
         }
     }
